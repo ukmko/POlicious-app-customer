@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'garudaMarket' do
+target 'policious' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'garudaMarketTests' do
+  target 'policiousTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'garudaMarket' do
   end
 end
 
-target 'garudaMarket-tvOS' do
-  # Pods for garudaMarket-tvOS
+target 'policious-tvOS' do
+  # Pods for policious-tvOS
 
-  target 'garudaMarket-tvOSTests' do
+  target 'policious-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

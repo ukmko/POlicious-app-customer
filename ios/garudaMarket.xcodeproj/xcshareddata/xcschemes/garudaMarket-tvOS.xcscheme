@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "garudaMarket-tvOS.app"
-               BlueprintName = "garudaMarket-tvOS"
-               ReferencedContainer = "container:garudaMarket.xcodeproj">
+               BuildableName = "policious-tvOS.app"
+               BlueprintName = "policious-tvOS"
+               ReferencedContainer = "container:policious.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "garudaMarket-tvOSTests.xctest"
-               BlueprintName = "garudaMarket-tvOSTests"
-               ReferencedContainer = "container:garudaMarket.xcodeproj">
+               BuildableName = "policious-tvOSTests.xctest"
+               BlueprintName = "policious-tvOSTests"
+               ReferencedContainer = "container:policious.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "garudaMarket-tvOS.app"
-            BlueprintName = "garudaMarket-tvOS"
-            ReferencedContainer = "container:garudaMarket.xcodeproj">
+            BuildableName = "policious-tvOS.app"
+            BlueprintName = "policious-tvOS"
+            ReferencedContainer = "container:policious.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "garudaMarket-tvOS.app"
-            BlueprintName = "garudaMarket-tvOS"
-            ReferencedContainer = "container:garudaMarket.xcodeproj">
+            BuildableName = "policious-tvOS.app"
+            BlueprintName = "policious-tvOS"
+            ReferencedContainer = "container:policious.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
