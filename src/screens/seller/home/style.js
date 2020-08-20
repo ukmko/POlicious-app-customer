@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
-import { Colors, Metrics } from '../../themes'
+import { Colors, Metrics } from '../../../themes'
 
-const HEADER_HEIGHT = 200
+const HEADER_HEIGHT = 60
 
 export default StyleSheet.create({
   linearGradient: {
@@ -21,17 +21,27 @@ export default StyleSheet.create({
     backgroundColor: 'transparent',
   },
   headContainer: {
-    zIndex: -1,
     backgroundColor: Colors.primary,
     height: HEADER_HEIGHT,
     // zIndex: 1,
-    position: 'absolute',
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
+    // borderBottomLeftRadius: 30,
+    // borderBottomRightRadius: 30,
     top: 0,
     right: 0,
     left: 0,
     overflow: 'hidden',
+    elevation: 1,
+  },
+   headHome: {
+    backgroundColor: Colors.primary,
+    height: 160,
+    zIndex: -1,
+    paddingVertical: 30, 
+    width: '100%', 
+    alignItems: 'center',
+    flex: 1,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
     elevation: 1,
   },
   searchInputButton: {

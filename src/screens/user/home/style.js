@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Colors, Metrics } from '../../themes'
+import { Colors, Metrics } from '../../../themes'
 
 const HEADER_HEIGHT = 200
 

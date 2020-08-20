@@ -33,7 +33,7 @@ const appColors = {
   pending: colors.softPurple,
   completed: colors.gold,
   cancel: colors.red,
-  background: '#E1EEEE',
+  background: '#F4F2FE',
 }
 
 export default {

@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -15,6 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 import {
   Header,
@@ -23,13 +24,27 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import NavigationRouter from './router'
+// import NavigationRouter from './router'
+import AuthStackScreen from './navigate/auth-stack-container'
+import TabStackScreen from './navigate/tab-stack-navigate'
+import TabSellerStackScreen from './navigate/seller-tab-stack-navigate'
+import {AuthContext} from './context'
 
 const App  = () => {
+  const [user, setUser] = useState()
+   const authContext = React.useMemo(() => ({
+    signIn: () => {
+      setUser('fdsds')
+    },
+   }))
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <NavigationRouter />
+      <StatusBar backgroundColor="#CBAE60" barStyle="light-content" />
+      <AuthContext.Provider value={authContext}>
+        <NavigationContainer>
+          {user ? <TabSellerStackScreen /> : <AuthStackScreen />}
+        </NavigationContainer>
+      </AuthContext.Provider>
     </>
   );
 };

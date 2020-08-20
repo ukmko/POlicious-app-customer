@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 // import { inject, observer  } from 'mobx-react'
 import { Text } from 'react-native-paper'
-import { Colors, Metrics } from '../../themes'
+import { Colors, Metrics } from '../../../themes'
 import {View, Animated, Platform, FlatList, RefreshControl, ScrollView } from 'react-native'
 // import Modal from 'react-native-modal'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'

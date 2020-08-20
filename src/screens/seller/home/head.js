@@ -6,9 +6,9 @@ import {
   Animated,
 } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
-import { Colors, Metrics, Images } from '../../themes'
+import { Colors, Metrics, Images } from '../../../themes'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { TouchableRipple, IconButton } from 'react-native-paper'
+import { Badge,TouchableRipple, IconButton } from 'react-native-paper'
 
 import styles from './style'
 
@@ -57,21 +57,16 @@ const HeadScreen = ({ head, headText }) => (
         flex: 1
       }}
     >
+    <View style={{ position: 'relative' }}>
       <IconButton
         icon="bell"
         color={Colors.white}
         size={20}
         onPress={() => console.log('Pressed')}
       />
+      <Text style={{ position: 'absolute', top: 6, right: 8, backgroundColor: 'red', borderRadius: 60, width: 20, height: 20, textAlign: 'center', fontSize: 12, justifyContent: 'center', alignItems: 'center', color: '#FFFFFF' }}>2</Text>
     </View>
     </View>
-    <View style={{ marginTop: 48, width: '100%', paddingHorizontal: Metrics.bigMargin }}>
-      <Text style={{ color: Colors.white, fontSize: Metrics.fontNote, fontFamily: 'LatoBold', lineHeight: Metrics.fontHeader }}>
-        Hallo, Oxsa ...
-      </Text>
-      <Text style={{ color: Colors.white, fontSize: 12, fontFamily: 'LatoRegular', lineHeight: Metrics.fontHeader }}>
-        Sekarang mudah Pre-Order makanan favourite
-      </Text>
     </View>
     </LinearGradient>
   </Animated.View>

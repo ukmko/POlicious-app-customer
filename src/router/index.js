@@ -19,6 +19,12 @@ import TabBar from '../components/tab-bar'
 
 import AuthScreen from '../screens/auth.js'
 import HomeScreen from '../screens/home'
+import LoginScreen from '../screens/session/login'
+import SignupScreen from '../screens/session/signup'
+import SignupSellerScreen from '../screens/session/signup-seller'
+import CartScreen from '../screens/cart'
+import {AuthContext} from '../context'
+
 import { Colors } from '../themes'
 
 import { StyleSheet } from 'react-native'
@@ -31,6 +37,11 @@ const NavigationRouter = () => {
   const [initializing, setInitializing] = useState(true)
   const [user, setUser] = useState()
 
+   const authContext = React.useMemo(() => ({
+    signIn: () => {
+      setUser('fdsds')
+    },
+   }))
   // function onAuthStateChanged(user) {
   //   setUser(user)
   //   if (initializing) setInitializing(false)
@@ -48,6 +59,7 @@ const NavigationRouter = () => {
   }
 
   return (
+        <AuthContext.Provider value={authContext}>
     <Router
       panHandlers={null}
       onStateChange={stateHandler}
@@ -57,7 +69,7 @@ const NavigationRouter = () => {
       <Overlay key="overlay">
         <Modal key="modal" hideNavBar>
           <Tabs
-              initial
+              initial={user}
               key="tabbar"
               tabBarPosition="bottom"
               hideNavBar
@@ -78,11 +90,11 @@ const NavigationRouter = () => {
                 />
                 <Scene
                   key="category"
-                  component={AuthScreen}
+                  component={CartScreen}
                 />
                 <Scene
                   key="search"
-                  component={AuthScreen}
+                  component={CartScreen}
                 />
               </Stack>
               <Stack
@@ -93,7 +105,7 @@ const NavigationRouter = () => {
               >
                 <Scene
                   key="cart"
-                  component={AuthScreen}
+                  component={CartScreen}
                   hideNavBar
                 />
               </Stack>
@@ -105,7 +117,7 @@ const NavigationRouter = () => {
               >
                 <Scene
                   key="profile"
-                  component={AuthScreen}
+                  component={CartScreen}
                   hideNavBar
                 />
               </Stack>
@@ -117,14 +129,36 @@ const NavigationRouter = () => {
               >
                 <Scene
                   key="profile"
-                  component={AuthScreen}
+                  component={CartScreen}
                   hideNavBar
                 />
               </Stack>
             </Tabs>
+            <Scene
+              key="auth"
+              initial={!user}
+              component={AuthScreen}
+              hideNavBar
+            />
+            <Scene
+              key="login"
+              component={LoginScreen}
+              hideNavBar
+            />
+            <Scene
+              key="signup"
+              component={SignupScreen}
+              hideNavBar
+            />
+            <Scene
+              key="signup-seller"
+              component={SignupSellerScreen}
+              hideNavBar
+            />
         </Modal>
       </Overlay>
     </Router>
+        </AuthContext.Provider>
   )
 }
 

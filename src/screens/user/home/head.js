@@ -6,7 +6,7 @@ import {
   Animated,
 } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
-import { Colors, Metrics, Images } from '../../themes'
+import { Colors, Metrics, Images } from '../../../themes'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { TouchableRipple, IconButton } from 'react-native-paper'
 
