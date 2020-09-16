@@ -51,6 +51,12 @@ const LoginScreen = ({ navigation }) => {
           </View>
            <Button 
               mode="contained"
+          uppercase={false}
+              labelStyle={{
+                letterSpacing: 0,
+                fontSize: 16,
+                fontFamily: 'LatoBold',
+              }}
               onPress={signIn }
               style={{ marginTop: 20, borderRadius: 20 }}
             >

@@ -16,11 +16,11 @@ import IconMc from 'react-native-vector-icons/MaterialCommunityIcons'
 import CartScreen from '../screens/cart'
 import HomeScreen from '../screens/seller/home'
 import ProdukScreen from '../screens/seller/produk'
+import AddProdukScreen from '../screens/seller/add-product'
 import { Colors } from '../themes'
 import styles from './styles'
 
-const HomeStack = createStackNavigator();
-const DetailsStack = createStackNavigator();
+const SellerStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -56,11 +56,11 @@ const MainTabScreen = () => (
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="OrderScreen"
         component={CartScreen}
         options={{
           tabBarColor: '#ff4081',
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Order',
           tabBarIcon: ({ color, focused }) => (
             // <Icon name="ios-person" color={color} size={26} />
             <IconMc color={color} name='history' size={26} style={[focused && styles.iconShadow, {paddingBottom: 4}]}/>
@@ -82,66 +82,21 @@ const MainTabScreen = () => (
     </Tab.Navigator>
 )
 
-// const HomeStackScreen = ({navigation}) => (
-//    <HomeStack.Navigator screenOptions={{
-//           headerStyle: {
-//             backgroundColor: '#009387'
-//           },
-//           headerTintColor: '#fff',
-//           HeaderTitleStyle: {
-//             fontWeight: 'bold',
-//           },
-//        }}>
-//         <HomeStack.Screen
-//           name="Home"
-//           component={HomeScreen}
-//           options={{
-//             title: 'overview',
-//             headerLeft: () => (
-//               <Icon.Button name="ios-menu" 
-//                 size={25}
-//                 backgroundColor="#009387"
-//                 onPress={() => navigation.toggleDrawer()}
-//               ></Icon.Button>
-//             )
-//             // headerStyle: {
-//             //   backgroundColor: '#009387'
-//             // },
-//             // headerTintColor: '#fff',
-//             // HeaderTitleStyle: {
-//             //   fontWeight: 'bold',
-//             // },
-//           }}
-//         />
-//       </HomeStack.Navigator>
-// )
+const HomeStackScreen = ({navigation}) => (
+   <SellerStack.Navigator
+      initialRouteName="homeScreen"
+      headerMode='none'
+    >
+        <SellerStack.Screen
+          name="RootSellerScreen"
+          component={MainTabScreen}
+        />
+        <SellerStack.Screen
+          name="AddProductScreen"
+          component={AddProdukScreen}
+        />
+      </SellerStack.Navigator>
+)
 
 
-// const DetailsStackScreen = ({navigation}) => (
-//    <DetailsStack.Navigator screenOptions={{
-//           headerStyle: {
-//             backgroundColor: '#3d5afe'
-//           },
-//           headerTintColor: '#fff',
-//           HeaderTitleStyle: {
-//             fontWeight: 'bold',
-//           },
-//        }}>
-//         <DetailsStack.Screen
-//           name="Details"
-//           component={DetailsScreen}
-//           options={{
-//             title: 'Details',
-//             headerLeft: () => (
-//               <Icon.Button name="ios-menu" 
-//                 size={25}
-//                 backgroundColor="#3d5afe"
-//                 onPress={() => navigation.toggleDrawer()}
-//               ></Icon.Button>
-//             )
-//           }}
-//         />
-//       </DetailsStack.Navigator>
-// )
-
-export default MainTabScreen
+export default HomeStackScreen

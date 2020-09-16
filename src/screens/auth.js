@@ -32,6 +32,12 @@ const AuthScreen = ({navigation}) => {
       <Animatable.View  animation="fadeIn" style={{ flexDirection: 'row',}}>
         <Button 
           mode="contained"
+          uppercase={false}
+              labelStyle={{
+          letterSpacing: 0,
+          fontSize: 16,
+          fontFamily: 'LatoRegular',
+        }}
           style={{ flex: 1, margin: 12, borderRadius: 20 }}
           onPress={() => {
             navigation.navigate('SignupScreen')
@@ -40,9 +46,15 @@ const AuthScreen = ({navigation}) => {
           Sign up
         </Button>
         <Button 
+            labelStyle={{
+          letterSpacing: 0,
+          fontSize: 16,
+          fontFamily: 'LatoRegular',
+        }}
         onPress={() => {
             navigation.navigate('LoginScreen')
           }}
+          uppercase={false}
          mode="contained" style={{ flex: 1, margin: 12, borderRadius: 20 }}>
           Login
         </Button>

@@ -36,6 +36,9 @@ const App  = () => {
     signIn: () => {
       setUser('fdsds')
     },
+    signOut: () => {
+      setUser(null)
+    },
    }))
   return (
     <>

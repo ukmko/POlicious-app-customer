@@ -142,4 +142,44 @@ export default StyleSheet.create({
     padding: 5,
     resizeMode: 'cover',
   },
+   action: {
+        flexDirection: 'row',
+        marginTop: 10,
+        borderWidth: 2,
+        borderRadius: 16,
+        padding: 9,
+        alignItems: 'center',
+        borderColor: '#CBAE60',
+    },
+    actionError: {
+        flexDirection: 'row',
+        marginTop: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: '#FF0000',
+        paddingBottom: 5
+    },
+    textInput: {
+        flex: 1,
+        paddingLeft: 10,
+        color: '#05375a',
+    },
+    errorMsg: {
+        color: '#FF0000',
+        fontSize: 14,
+    },
+    button: {
+        alignItems: 'center',
+        marginTop: 50
+    },
+    signIn: {
+        width: '100%',
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10
+    },
+    textSign: {
+        fontSize: 18,
+        fontWeight: 'bold'
+    }
 })
